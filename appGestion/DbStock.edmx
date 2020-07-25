@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="GESTIONModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ID_Client" />
+          </Key>
+          <Property Name="ID_Client" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nom_Client" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Adresse_Client" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Téléphone_Client" Type="nvarchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Fournisseur">
+          <Key>
+            <PropertyRef Name="ID_Fournisseur" />
+          </Key>
+          <Property Name="ID_Fournisseur" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nom_Fournisseur" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Adresse_Fournisseur" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Téléphone_Fournisseur" Type="nvarchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Produit">
+          <Key>
+            <PropertyRef Name="ID_Produit" />
+          </Key>
+          <Property Name="ID_Produit" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nom_Produit" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Reference_Produit" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Quantite_Produit" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Rayon_Produit" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Designation_Produit" Type="nvarchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <EntityType Name="utilisateur">
+          <Key>
+            <PropertyRef Name="NomUtilisateur" />
+          </Key>
+          <Property Name="NomUtilisateur" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="MotdePasse" Type="nvarchar" MaxLength="250" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="GESTIONModelStoreContainer">
+          <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Fournisseur" EntityType="Self.Fournisseur" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Produit" EntityType="Self.Produit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="utilisateur" EntityType="Self.utilisateur" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GESTIONModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DbStockContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Clients" EntityType="GESTIONModel.Client" />
+          <EntitySet Name="Fournisseurs" EntityType="GESTIONModel.Fournisseur" />
+          <EntitySet Name="Produits" EntityType="GESTIONModel.Produit" />
+          <EntitySet Name="utilisateurs" EntityType="GESTIONModel.utilisateur" />
+        </EntityContainer>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ID_Client" />
+          </Key>
+          <Property Name="ID_Client" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nom_Client" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Adresse_Client" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Téléphone_Client" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Fournisseur">
+          <Key>
+            <PropertyRef Name="ID_Fournisseur" />
+          </Key>
+          <Property Name="ID_Fournisseur" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nom_Fournisseur" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Adresse_Fournisseur" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Téléphone_Fournisseur" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Produit">
+          <Key>
+            <PropertyRef Name="ID_Produit" />
+          </Key>
+          <Property Name="ID_Produit" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nom_Produit" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Reference_Produit" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Quantite_Produit" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Rayon_Produit" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Designation_Produit" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="utilisateur">
+          <Key>
+            <PropertyRef Name="NomUtilisateur" />
+          </Key>
+          <Property Name="NomUtilisateur" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="MotdePasse" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GESTIONModelStoreContainer" CdmEntityContainer="DbStockContext">
+          <EntitySetMapping Name="Clients">
+            <EntityTypeMapping TypeName="GESTIONModel.Client">
+              <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="Téléphone_Client" ColumnName="Téléphone_Client" />
+                <ScalarProperty Name="Adresse_Client" ColumnName="Adresse_Client" />
+                <ScalarProperty Name="Nom_Client" ColumnName="Nom_Client" />
+                <ScalarProperty Name="ID_Client" ColumnName="ID_Client" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Fournisseurs">
+            <EntityTypeMapping TypeName="GESTIONModel.Fournisseur">
+              <MappingFragment StoreEntitySet="Fournisseur">
+                <ScalarProperty Name="Téléphone_Fournisseur" ColumnName="Téléphone_Fournisseur" />
+                <ScalarProperty Name="Adresse_Fournisseur" ColumnName="Adresse_Fournisseur" />
+                <ScalarProperty Name="Nom_Fournisseur" ColumnName="Nom_Fournisseur" />
+                <ScalarProperty Name="ID_Fournisseur" ColumnName="ID_Fournisseur" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Produits">
+            <EntityTypeMapping TypeName="GESTIONModel.Produit">
+              <MappingFragment StoreEntitySet="Produit">
+                <ScalarProperty Name="Designation_Produit" ColumnName="Designation_Produit" />
+                <ScalarProperty Name="Rayon_Produit" ColumnName="Rayon_Produit" />
+                <ScalarProperty Name="Quantite_Produit" ColumnName="Quantite_Produit" />
+                <ScalarProperty Name="Reference_Produit" ColumnName="Reference_Produit" />
+                <ScalarProperty Name="Nom_Produit" ColumnName="Nom_Produit" />
+                <ScalarProperty Name="ID_Produit" ColumnName="ID_Produit" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="utilisateurs">
+            <EntityTypeMapping TypeName="GESTIONModel.utilisateur">
+              <MappingFragment StoreEntitySet="utilisateur">
+                <ScalarProperty Name="MotdePasse" ColumnName="MotdePasse" />
+                <ScalarProperty Name="NomUtilisateur" ColumnName="NomUtilisateur" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

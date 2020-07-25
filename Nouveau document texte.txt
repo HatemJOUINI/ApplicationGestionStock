@@ -1,0 +1,11 @@
+
+// vider les textBox 
+            txtNom.Text = "Nom Fournisseur"; txtNom.ForeColor = Color.Silver;
+            txtAdd.Text = "Addresse"; txtAdd.ForeColor = Color.Silver;
+            txtTel.Text = "Téléphone"; txtTel.ForeColor = Color.Silver;
+
+
+
+
+
+ 

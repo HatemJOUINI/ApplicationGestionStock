@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GESTIONModelStoreContainer" CdmEntityContainer="DbStockContext">
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="GESTIONModel.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="Téléphone_Client" ColumnName="Téléphone_Client" />
+          <ScalarProperty Name="Adresse_Client" ColumnName="Adresse_Client" />
+          <ScalarProperty Name="Nom_Client" ColumnName="Nom_Client" />
+          <ScalarProperty Name="ID_Client" ColumnName="ID_Client" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fournisseurs">
+      <EntityTypeMapping TypeName="GESTIONModel.Fournisseur">
+        <MappingFragment StoreEntitySet="Fournisseur">
+          <ScalarProperty Name="Téléphone_Fournisseur" ColumnName="Téléphone_Fournisseur" />
+          <ScalarProperty Name="Adresse_Fournisseur" ColumnName="Adresse_Fournisseur" />
+          <ScalarProperty Name="Nom_Fournisseur" ColumnName="Nom_Fournisseur" />
+          <ScalarProperty Name="ID_Fournisseur" ColumnName="ID_Fournisseur" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Produits">
+      <EntityTypeMapping TypeName="GESTIONModel.Produit">
+        <MappingFragment StoreEntitySet="Produit">
+          <ScalarProperty Name="Designation_Produit" ColumnName="Designation_Produit" />
+          <ScalarProperty Name="Rayon_Produit" ColumnName="Rayon_Produit" />
+          <ScalarProperty Name="Quantite_Produit" ColumnName="Quantite_Produit" />
+          <ScalarProperty Name="Reference_Produit" ColumnName="Reference_Produit" />
+          <ScalarProperty Name="Nom_Produit" ColumnName="Nom_Produit" />
+          <ScalarProperty Name="ID_Produit" ColumnName="ID_Produit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="utilisateurs">
+      <EntityTypeMapping TypeName="GESTIONModel.utilisateur">
+        <MappingFragment StoreEntitySet="utilisateur">
+          <ScalarProperty Name="MotdePasse" ColumnName="MotdePasse" />
+          <ScalarProperty Name="NomUtilisateur" ColumnName="NomUtilisateur" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

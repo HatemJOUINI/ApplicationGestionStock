@@ -1,0 +1,12 @@
+
+            if (!pnlaficher.Controls.Contains(PL.User_list_Client.Instance))
+            {
+                pnlaficher.Controls.Add(PL.User_list_Client.Instance);
+                PL.User_list_Client.Instance.Dock = DockStyle.Fill;
+                PL.User_list_Client.Instance.BringToFront();
+
+            }
+            else
+            {
+                PL.User_list_Client.Instance.BringToFront();
+            }

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GESTIONModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ID_Client" />
+    </Key>
+    <Property Name="ID_Client" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nom_Client" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Adresse_Client" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Téléphone_Client" Type="nvarchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Fournisseur">
+    <Key>
+      <PropertyRef Name="ID_Fournisseur" />
+    </Key>
+    <Property Name="ID_Fournisseur" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nom_Fournisseur" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Adresse_Fournisseur" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Téléphone_Fournisseur" Type="nvarchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Produit">
+    <Key>
+      <PropertyRef Name="ID_Produit" />
+    </Key>
+    <Property Name="ID_Produit" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nom_Produit" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Reference_Produit" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Quantite_Produit" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Rayon_Produit" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Designation_Produit" Type="nvarchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="utilisateur">
+    <Key>
+      <PropertyRef Name="NomUtilisateur" />
+    </Key>
+    <Property Name="NomUtilisateur" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="MotdePasse" Type="nvarchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="GESTIONModelStoreContainer">
+    <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Fournisseur" EntityType="Self.Fournisseur" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Produit" EntityType="Self.Produit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="utilisateur" EntityType="Self.utilisateur" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
